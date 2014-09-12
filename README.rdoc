@@ -1,3 +1,9 @@
 = AccountSubdomain
 
 This project rocks and uses MIT-LICENSE.
+
+gem 'account_subdomain'
+
+rails g account_subdomain:install
+
+change your initializers account_subdomain.rb
