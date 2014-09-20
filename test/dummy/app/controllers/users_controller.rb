@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = current_subdomain.users.all
+    @users = current_subdomain.users.load
   end
 
   # GET /users/1
