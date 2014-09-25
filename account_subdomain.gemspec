@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.version     = AccountSubdomain::VERSION
   s.authors     = ["Sachin Choudhary"]
   s.email       = ["sachin238@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of AccountSubdomain."
-  s.description = "TODO: Description of AccountSubdomain."
+  s.homepage    = "https://github.com/sachin/account_subdomain"
+  s.summary     = "Subdomain functionality to rails application."
+  s.description = "Account subdomain gem add the functionality of adding and managing the subdomain functionality in rails application."
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.0"
