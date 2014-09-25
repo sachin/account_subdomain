@@ -9,7 +9,10 @@ AccountSubdomain.reflections[:has_one] = []
 AccountSubdomain.reflections[:belongs_to] = []
 
 #This setting is used for redirect for invalid subdomain.
-AccountSubdomain.redirect_path = 'account_subdomain_path'
+AccountSubdomain.redirect_path = '/'
+
+#This setting is used for redirect after successfully creation of subdomain.
+AccountSubdomain.after_creation_path = 'account_subdomain.accounts_path'
 
 #This setting is for domain tld
 # tdd for

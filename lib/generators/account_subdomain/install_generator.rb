@@ -9,11 +9,6 @@ module AccountSubdomain
         template "account_subdomain.rb", "config/initializers/account_subdomain.rb"
       end
 
-      #desc "Creates a url helper."
-      #def copy_url_helper
-      #  template "url_helper.rb", "app/helpers/url_helper.rb"
-      #end
-
       def copy_account_subdomain_migration
         migration_template 'migration.rb', 'db/migrate/create_account_subdomain_accounts.rb'
       end

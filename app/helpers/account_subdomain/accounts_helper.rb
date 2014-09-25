@@ -6,7 +6,7 @@ module AccountSubdomain
     end
 
     def validate_subdomain
-      redirect_to eval("main_app.#{AccountSubdomain.redirect_path}"), :error => 'You are not authorized.' unless current_subdomain.present?
+      redirect_to eval("#{AccountSubdomain.redirect_path}"), :error => 'You are not authorized.' unless current_subdomain.present?
     end
 
     def current_subdomain

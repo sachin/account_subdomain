@@ -12,4 +12,8 @@ module AccountSubdomain
 
   mattr_accessor :action_controller_filters
   @@action_controller_filters = {}
+
+  mattr_accessor :after_creation_path
+  @@after_creation_path = 'account_subdomain.accounts_path'
+
 end

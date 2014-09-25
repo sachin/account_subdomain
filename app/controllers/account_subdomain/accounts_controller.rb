@@ -23,7 +23,7 @@ module AccountSubdomain
       @account = AccountSubdomain::Account.new(account_params)
 
       if @account.save
-        redirect_to main_app.root_url(:subdomain => @account.subdomain), notice: 'Account was successfully created.'
+        redirect_to eval("#{AccountSubdomain.after_creation_path}(:subdomain => #{@account.subdomain})"), notice: 'Account was successfully created.'
       else
         render action: 'new'
       end
