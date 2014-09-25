@@ -1,4 +1,4 @@
-require_dependency "account_subdomain/application_controller"
+#require_dependency "account_subdomain/application_controller"
 
 module AccountSubdomain
   class AccountsController < ApplicationController
@@ -6,7 +6,7 @@ module AccountSubdomain
 
     # GET /accounts
     def index
-      @accounts = Account.all
+      @accounts = AccountSubdomain::Account.all
     end
 
     # GET /accounts/1
@@ -15,12 +15,12 @@ module AccountSubdomain
 
     # GET /accounts/new
     def new
-      @account = Account.new
+      @account = AccountSubdomain::Account.new
     end
 
     # POST /accounts
     def create
-      @account = Account.new(account_params)
+      @account = AccountSubdomain::Account.new(account_params)
 
       if @account.save
         redirect_to main_app.root_url(:subdomain => @account.subdomain), notice: 'Account was successfully created.'
@@ -38,7 +38,7 @@ module AccountSubdomain
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_account
-        @account = Account.find(params[:id])
+        @account = AccountSubdomain::Account.find(params[:id])
       end
 
       # Only allow a trusted parameter "white list" through.

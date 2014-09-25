@@ -9,4 +9,7 @@ module AccountSubdomain
 
   mattr_accessor :tld_length
   @@tld_length = 1
+
+  mattr_accessor :action_controller_filters
+  @@action_controller_filters = {}
 end
