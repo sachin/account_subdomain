@@ -1,12 +1,11 @@
 #Add the relationships in the Account Subdomain models.
 #like if account subdomain has many users
-#you can give that AccountSubdomain.reflections[:has_many] = ['users']
+#you can give that AccountSubdomain.reflections << "has_many :users, class_name: 'users', dependent: :destroy"
 #You can give an array to each type of relationships.
 #
 #AccountSubdomain supports every type of relationships which rails supports
-AccountSubdomain.reflections[:has_many] = ['users']
-AccountSubdomain.reflections[:has_one] = []
-AccountSubdomain.reflections[:belongs_to] = []
+AccountSubdomain.reflections << "has_many :users, class_name: 'users', dependent: :destroy"
+
 
 #This setting is used for redirect for invalid subdomain.
 AccountSubdomain.redirect_path = '/'
