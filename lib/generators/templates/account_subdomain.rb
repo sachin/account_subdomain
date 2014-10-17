@@ -11,7 +11,7 @@ AccountSubdomain.reflections << "has_many :users, class_name: 'users', dependent
 AccountSubdomain.redirect_path = '/'
 
 #This setting is used for redirect after successfully creation of subdomain.
-AccountSubdomain.after_creation_path = 'account_subdomain.accounts_path'
+AccountSubdomain.after_creation_url = 'account_subdomain.accounts_url'
 
 #This setting is for domain tld
 # tdd for
