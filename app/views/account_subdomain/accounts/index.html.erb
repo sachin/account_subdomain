@@ -3,7 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Subdomain</th>
+      <% (AccountSubdomain::Account.column_names - ['id', 'created_at', 'updated_at']).each do|column_name|%>
+      <th><%= column_name.humanize.capitalize%></th>
+      <%end%>
       <th></th>
       <th></th>
     </tr>
@@ -12,7 +14,10 @@
   <tbody>
     <% @accounts.each do |account| %>
       <tr>
-        <td><%= account.subdomain %></td>
+        <% (AccountSubdomain::Account.column_names - ['id', 'created_at', 'updated_at']).each do|column_name|%>
+          <td><%= account.send(column_name) %></td>
+        <%end%>
+
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Destroy', account, :method => :delete, :data => { confirm: 'Are you sure?' } %></td>
       </tr>
